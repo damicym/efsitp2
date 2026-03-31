@@ -2,29 +2,18 @@ function Form() {
 
     return (
         <>
-            <h1>Crear mi Cita</h1>
+            <h2>Crear mi Cita</h2>
             <form>
-                <div className="field">
                     <label>Nombre Mascota</label>
                     <input placeholder="Nombre Mascota" type="text" class="u-full-width"></input>
-                </div>
-                <div className="field">
                     <label>Nombre Dueño</label>
-                    <input placeholder="Nombre Dueño de la mascota" type="text" class="u-full-width"></input>
-                </div>
-                <div className="field">
+                    <input placeholder="Nombre dueño de la mascota" type="text" class="u-full-width"></input>
                     <label>Fecha</label>
                     <input type="date" class="u-full-width"></input>
-
-                </div>
-                <div className="field">
-                    <label>Hora</label>
+                    <label>hora</label>
                     <input type="time" class="u-full-width"></input>
-                </div>
-                <div className="field">
                     <label>Síntomas</label>
                     <textarea class="u-full-width"></textarea>
-                </div>
 
                 <button type="submit" class="u-full-width button-primary">Agregar Cita</button>
 
