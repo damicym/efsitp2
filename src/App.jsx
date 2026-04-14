@@ -1,6 +1,7 @@
 import Form from "./components/Form"
 import Listado from "./components/Listado"
 import { useState } from "react"
+import "./styles/app.css"
 
 function App() {
     const [citas, setCitas] = useState([])
@@ -15,7 +16,7 @@ function App() {
                         <Form setCitas={setCitas}/>
                     </div>
                     <div className="one-half column">
-                        <Listado citas={citas}/>
+                        <Listado citas={citas} setCitas={setCitas}/>
                     </div>
                     
                 </div>
