@@ -1,11 +1,18 @@
 import Form from "./components/Form"
 import Listado from "./components/Listado"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import "./styles/app.css"
 
 function App() {
-    const [citas, setCitas] = useState([])
-    
+    const [citas, setCitas] = useState(() => {
+        const data = localStorage.getItem('citas')
+        return data ? JSON.parse(data) : []
+    })
+
+    useEffect(() => {
+        localStorage.setItem("citas", JSON.stringify(citas))
+    }, [citas])
+
     return (
         <>
             <h1>ADMINISTRADOR DE PACIENTES</h1>

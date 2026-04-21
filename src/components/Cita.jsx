@@ -3,10 +3,11 @@ import "../styles/cita.css"
 function Cita({ data, id, setCitas }) {
 
     function handleDelete(){
-        window.confirm("Estas seguro de querer eliminar la cita?")
+        const res = window.confirm("Estas seguro de querer eliminar la cita?")
+        if (!res) return
         setCitas(prev => {
             const prevCitas = [...prev]
-            prevCitas.splice(id, 1)
+            prevCitas?.splice(id, 1)
             return prevCitas 
         })
     }
